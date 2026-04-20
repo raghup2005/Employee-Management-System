@@ -48,3 +48,19 @@ SELECT e.emp_name,
 FROM employes e
 LEFT JOIN bonuses b ON e.emp_id = b.emp_id
 GROUP BY e.emp_id;
+
+
+
+SELECT d.dept_name, SUM(e.emp_salary) AS total_salary
+FROM employes e
+JOIN departments d ON e.dept_id = d.dept_id
+GROUP BY d.dept_name;
+
+SELECT *
+FROM (
+    SELECT e.emp_name, d.dept_name, e.emp_salary,
+           RANK() OVER (PARTITION BY d.dept_name ORDER BY e.emp_salary DESC) AS rnk
+    FROM employes e
+    JOIN departments d ON e.dept_id = d.dept_id
+) t
+WHERE rnk = 1;
