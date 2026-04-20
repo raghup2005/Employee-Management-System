@@ -27,3 +27,11 @@ FROM employes;
 SELECT emp_name, emp_salary,
 RANK() OVER (ORDER BY emp_salary DESC) AS rank_num
 FROM employes;
+
+SELECT *
+FROM (
+    SELECT emp_name, emp_salary,
+    DENSE_RANK() OVER (ORDER BY emp_salary DESC) AS rnk
+    FROM employes
+) 
+WHERE rnk <= 2;
