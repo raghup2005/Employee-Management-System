@@ -21,3 +21,16 @@ It simulates real-world business logic where employee salary updates automatical
 - Implement Attendance system
 - Add Bonus calculations
 - Use Window Functions (RANK, DENSE_RANK)
+
+
+>>> Multi-Table Relationships
+
+The project now supports multiple tables:
+
+- Employees linked with Departments
+- Bonuses linked with Employees
+- Foreign key relationships implemented
+>>> Advanced Queries
+- Multi-table JOINs
+- Aggregations with GROUP BY
+- Window functions with PARTITION

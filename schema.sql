@@ -13,4 +13,3 @@ create expenses(expenses id int,
                 expenses_amount int):
 
 
-                
