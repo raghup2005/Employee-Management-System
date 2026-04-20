@@ -14,3 +14,16 @@ FROM employes
 GROUP BY refferal_id;
 
 SELECT * FROM expenses;
+
+
+SELECT emp_name, emp_salary,
+ROW_NUMBER() OVER (ORDER BY emp_salary DESC) AS row_num
+FROM employes;
+
+SELECT emp_name, emp_salary,
+RANK() OVER (ORDER BY emp_salary DESC) AS rank_num
+FROM employes;
+
+SELECT emp_name, emp_salary,
+RANK() OVER (ORDER BY emp_salary DESC) AS rank_num
+FROM employes;
