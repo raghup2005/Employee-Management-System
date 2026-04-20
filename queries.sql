@@ -1,0 +1,16 @@
+# highest salary
+SELECT * FROM employes
+ORDER BY emp_salary DESC
+LIMIT 1;
+
+# average salary
+SELECT emp_name
+FROM employes
+WHERE emp_salary > (SELECT AVG(emp_salary) FROM employes);
+
+
+SELECT refferal_id, COUNT(*)
+FROM employes
+GROUP BY refferal_id;
+
+SELECT * FROM expenses;
