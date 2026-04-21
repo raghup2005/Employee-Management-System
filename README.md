@@ -22,7 +22,6 @@ It simulates real-world business logic where employee salary updates automatical
 - Add Bonus calculations
 - Use Window Functions (RANK, DENSE_RANK)
 
-## 🚀 Advanced SQL Features
 
 This project includes advanced SQL concepts using Window Functions:
 
@@ -42,3 +41,40 @@ The project now supports multiple tables:
 - Multi-table JOINs
 - Aggregations with GROUP BY
 - Window functions with PARTITION
+
+
+## 📂 Database Structure
+
+### 👨‍💼 Employees Table
+- emp_id (Primary Key)
+- emp_name
+- emp_salary
+- annual_income
+- emp_hire_date
+- refferal_id
+
+###  Expenses Table
+- expenses_name (Primary Key)
+- expenses_amount
+
+---
+
+##  Triggers Used
+
+### 1. Before Update
+Automatically updates annual income when salary changes.
+
+### 2. After Insert
+Adds employee salary to total expenses.
+
+### 3. After Delete
+Subtracts employee salary from total expenses.
+
+---
+
+## How to Run
+
+1. Run `schema.sql`
+2. Run `sample_data.sql`
+3. Run `triggers.sql`
+4. Execute queries from `queries.sql`
