@@ -22,6 +22,14 @@ It simulates real-world business logic where employee salary updates automatical
 - Add Bonus calculations
 - Use Window Functions (RANK, DENSE_RANK)
 
+## 🚀 Advanced SQL Features
+
+This project includes advanced SQL concepts using Window Functions:
+
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+
 
 >>> Multi-Table Relationships
 
